@@ -48,6 +48,7 @@ export default function BasicCard(props: any) {
               color: '#2c262b',
               my: '1rem',
               fontWeight: 'bold',
+              height: '3.5rem',
             }}
           >
             {data.text}
