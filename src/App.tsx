@@ -1,9 +1,12 @@
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
+import { Box, Button, CircularProgress } from '@mui/material';
+import { useState } from 'react';
+
 import CardGrid from './components/CardGrid';
-import CustomButton from './components/CustomButton';
 
 function App() {
+  const [isShown, setIsShown] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <Box
       sx={{
@@ -18,7 +21,20 @@ function App() {
         Learn electronics & coding <br /> with our best-selling DIY STEM kits:
       </Typography>
       <CardGrid />
-      <CustomButton text="Show more" color="#ef2b37" />
+      {isShown && <CardGrid />}
+      <Button
+        onClick={() => {
+          setIsLoading(true);
+          setTimeout(() => {
+            setIsShown(true);
+            setIsLoading(false);
+          }, 1000);
+        }}
+        sx={{ display: isLoading ? 'none' : 'block' }}
+      >
+        Show more
+      </Button>
+      {isLoading && <CircularProgress />}
     </Box>
   );
 }

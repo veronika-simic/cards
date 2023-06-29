@@ -10,8 +10,6 @@
 - [Setup](#setup)
 - [Usage](#usage)
 - [Project Status](#project-status)
-- [Room for Improvement](#room-for-improvement)
-- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 ## General Information
@@ -58,12 +56,6 @@ To see the project in browser visit:
 ## Project Status
 
 Project is: _in progress_
-
-## Room for Improvement
-
-Room for improvement:
-
-- Tests for frontend
 
 ## Contact
 
