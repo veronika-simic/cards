@@ -24,7 +24,7 @@ export default function BasicCard(props: ProductData) {
         <CardMedia
           component="img"
           image={data.imgSrc}
-          alt={data.text}
+          alt={data.title}
           style={{ height: '16rem' }}
         />
 
