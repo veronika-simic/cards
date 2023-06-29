@@ -9,6 +9,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:prettier/recommended',
   ],
   overrides: [
     {
@@ -27,11 +28,18 @@ module.exports = {
     sourceType: 'module',
     project: './cards/tsconfig.json',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': 0,
-    'import/extensions': ['error', 'ignorePackages', {
-      js: 'never', jsx: 'never', ts: 'never', tsx: 'never',
-    }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
 };
