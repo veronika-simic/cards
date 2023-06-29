@@ -10,7 +10,14 @@ export default function BasicCard(props: any) {
   const { data } = props;
   return (
     <Card
-      sx={{ maxWidth: 300, boxShadow: '10px 10px 43px -2px rgba(0,0,0,0.25)' }}
+      sx={{
+        maxWidth: 300,
+        boxShadow: '10px 10px 43px -2px rgba(0,0,0,0.25)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100%',
+      }}
     >
       <CardActionArea>
         <CardMedia
@@ -20,7 +27,12 @@ export default function BasicCard(props: any) {
           style={{ height: '16rem' }}
         />
 
-        <CardContent sx={{ px: '1.25rem', my: '1rem' }}>
+        <CardContent
+          sx={{
+            px: '1.25rem',
+            my: '1rem',
+          }}
+        >
           <Typography
             gutterBottom
             variant="h5"
