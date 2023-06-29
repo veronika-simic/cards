@@ -5,7 +5,7 @@ export default function CardGrid() {
   const products = [
     {
       color: '#ef2b37',
-      imgSrc: '/public/images/spencer.jpeg',
+      imgSrc: 'images/spencer.jpeg',
       title: 'Spencer',
       text: ' A DIY voice assistant that talks, lights up, and understands voice commands',
       previousPrice: '1,027.99',
@@ -15,7 +15,7 @@ export default function CardGrid() {
     },
     {
       color: '#f9c708',
-      imgSrc: '/public/images/jay-d.jpeg',
+      imgSrc: 'images/jay-d.jpeg',
       title: 'Jay-D',
       text: 'Build & code your own DJ mixer',
       previousPrice: '1,027.99',
@@ -25,7 +25,7 @@ export default function CardGrid() {
     },
     {
       color: '#3abfe6',
-      imgSrc: '/public/images/nibble.jpeg',
+      imgSrc: 'images/nibble.jpeg',
       title: 'Nibble',
       text: 'Build & code your very own retro game console',
       previousPrice: '813.99',
