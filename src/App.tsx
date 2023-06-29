@@ -1,7 +1,7 @@
-import Button from '@mui/material/Button';
+import BasicCard from './components/BasicCard';
 
 function App() {
-  return <Button variant="contained">Contained</Button>;
+  return <BasicCard />;
 }
 
 export default App;
