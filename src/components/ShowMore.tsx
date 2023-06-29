@@ -1,4 +1,4 @@
-import { Box, Button, CircularProgress } from '@mui/material';
+import { Button, CircularProgress } from '@mui/material';
 import { useState } from 'react';
 
 import CardGrid from './CardGrid';
