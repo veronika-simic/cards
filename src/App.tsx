@@ -30,7 +30,17 @@ function App() {
             setIsLoading(false);
           }, 1000);
         }}
-        sx={{ display: isLoading ? 'none' : 'block' }}
+        sx={{
+          display: isLoading ? 'none' : 'block',
+          mt: '2rem',
+          borderRadius: '5rem',
+          fontSize: '1.25rem',
+          p: '0.5rem 1.5rem',
+          textTransform: 'none',
+          backgroundColor: '#ef2b37',
+          color: 'white',
+          '&:hover': { backgroundColor: '#ef2b37' },
+        }}
       >
         Show more
       </Button>
