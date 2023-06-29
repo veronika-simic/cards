@@ -3,8 +3,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
-import CardButton from './CardButtons';
-import AgeChip from './AgeChip';
+import CardButton from './CardButton';
+import AgeChip from './AgeIndicator';
 
 export default function BasicCard() {
   return (
@@ -14,25 +14,44 @@ export default function BasicCard() {
           component="img"
           image="/src/images/spencer.jpeg"
           alt="spencer"
-          style={{ height: '100' }}
+          style={{ height: '16rem' }}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+        <CardContent sx={{ px: '1.25rem', my: '1rem' }}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            color="#ef2b37"
+            fontWeight="bold"
+          >
             Spencer
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            A DIY voice assistant that talks, lights up and understands voice
+          <Typography
+            variant="body2"
+            sx={{
+              my: '1rem',
+              fontWeight: 'bold',
+            }}
+          >
+            A DIY voice assistant that talks, lights up, and understands voice
             commands
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            kn1,027.99 kn813.99
+          <Typography
+            variant="h5"
+            component="h2"
+            color="#ef2b37"
+            sx={{ my: '0.5rem' }}
+          >
+            <s>kn1,027.99</s> kn813.99
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="#ef2b37">
             Limited 20% discount
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions
+        sx={{ my: '1.5rem', display: 'flex', justifyContent: 'space-between' }}
+      >
         <CardButton />
         <AgeChip />
       </CardActions>

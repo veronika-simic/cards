@@ -1,26 +1,25 @@
 import Typography from '@mui/material/Typography';
-import { Button, Grid } from '@mui/material';
-import BasicCard from './components/BasicCard';
+import { Box, Button } from '@mui/material';
+import CardGrid from './components/CardGrid';
 
 function App() {
   return (
-    <>
-      <Typography>
-        Learn electronics and coding <br /> with our best-selling DIY STEM kits:
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+      }}
+    >
+      <Typography variant="h4" sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+        Learn electronics &amp coding <br /> with our best-selling DIY STEM
+        kits:
       </Typography>
-      <Grid container spacing={2}>
-        <Grid item>
-          <BasicCard />
-        </Grid>
-        <Grid item>
-          <BasicCard />
-        </Grid>
-        <Grid item>
-          <BasicCard />
-        </Grid>
-      </Grid>
+      <CardGrid />
       <Button variant="contained">Show more</Button>
-    </>
+    </Box>
   );
 }
 
