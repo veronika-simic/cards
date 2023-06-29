@@ -3,10 +3,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
-import CardButton from './CardButton';
-import AgeChip from './AgeIndicator';
+import CustomButton from './CustomButton';
+import AgeIndicator from './AgeIndicator';
 
-export default function BasicCard() {
+export default function BasicCard(props: any) {
+  const { data } = props;
   return (
     <Card
       sx={{ maxWidth: 300, boxShadow: '10px 10px 43px -2px rgba(0,0,0,0.25)' }}
@@ -14,48 +15,49 @@ export default function BasicCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          image="/src/images/spencer.jpeg"
+          image={data.imgSrc}
           alt="spencer"
           style={{ height: '16rem' }}
         />
+
         <CardContent sx={{ px: '1.25rem', my: '1rem' }}>
           <Typography
             gutterBottom
             variant="h5"
             component="h2"
-            color="#ef2b37"
+            color={data.color}
             fontWeight="bold"
           >
-            Spencer
+            {data.title}
           </Typography>
           <Typography
             variant="body2"
             sx={{
+              color: '#2c262b',
               my: '1rem',
               fontWeight: 'bold',
             }}
           >
-            A DIY voice assistant that talks, lights up, and understands voice
-            commands
+            {data.text}
           </Typography>
           <Typography
             variant="h5"
             component="h2"
-            color="#ef2b37"
+            color={data.color}
             sx={{ my: '0.5rem' }}
           >
-            <s>kn1,027.99</s> kn813.99
+            <s>kn{data.previousPrice}</s> kn{data.currentPrice}
           </Typography>
-          <Typography variant="body2" color="#ef2b37">
-            Limited 20% discount
+          <Typography variant="body2" color={data.color}>
+            Limited {data.discount}% discount
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions
         sx={{ my: '1.5rem', display: 'flex', justifyContent: 'space-between' }}
       >
-        <CardButton />
-        <AgeChip />
+        <CustomButton text="Shop now" color={data.color} />
+        <AgeIndicator age={data.age} color={data.color} />
       </CardActions>
     </Card>
   );
