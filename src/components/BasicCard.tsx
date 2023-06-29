@@ -8,7 +8,9 @@ import AgeChip from './AgeIndicator';
 
 export default function BasicCard() {
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card
+      sx={{ maxWidth: 300, boxShadow: '10px 10px 43px -2px rgba(0,0,0,0.25)' }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"
