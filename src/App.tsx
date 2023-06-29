@@ -5,8 +5,15 @@ import { useState } from 'react';
 import CardGrid from './components/CardGrid';
 
 function App() {
-  const [isShown, setIsShown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [cardsCount, setCardsCount] = useState(1);
+  const handleClick = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setCardsCount((prevCount) => prevCount + 1);
+      setIsLoading(false);
+    }, 1000);
+  };
   return (
     <Box
       sx={{
@@ -20,16 +27,11 @@ function App() {
       <Typography variant="h5" sx={{ textAlign: 'center', fontWeight: 'bold' }}>
         Learn electronics & coding <br /> with our best-selling DIY STEM kits:
       </Typography>
-      <CardGrid />
-      {isShown && <CardGrid />}
+      {Array.from({ length: cardsCount }, (_, index) => (
+        <CardGrid key={index} />
+      ))}
       <Button
-        onClick={() => {
-          setIsLoading(true);
-          setTimeout(() => {
-            setIsShown(true);
-            setIsLoading(false);
-          }, 1000);
-        }}
+        onClick={handleClick}
         sx={{
           display: isLoading ? 'none' : 'block',
           mt: '2rem',
@@ -44,7 +46,14 @@ function App() {
       >
         Show more
       </Button>
-      {isLoading && <CircularProgress />}
+      {isLoading && (
+        <CircularProgress
+          sx={{
+            mt: '2rem',
+            color: '#ef2b37',
+          }}
+        />
+      )}
     </Box>
   );
 }
