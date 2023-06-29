@@ -5,8 +5,9 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
 import CustomButton from './CustomButton';
 import AgeIndicator from './AgeIndicator';
+import { ProductData } from '../types/ProductData';
 
-export default function BasicCard(props: any) {
+export default function BasicCard(props: ProductData) {
   const { data } = props;
   return (
     <Card
@@ -68,7 +69,7 @@ export default function BasicCard(props: any) {
       </CardActionArea>
       <CardActions
         sx={{
-          mt: '2.5rem',
+          mt: '2rem',
           mb: '1.5rem',
           display: 'flex',
           justifyContent: 'space-between',
