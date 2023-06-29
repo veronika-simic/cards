@@ -31,7 +31,7 @@ export default function BasicCard(props: ProductData) {
         <CardContent
           sx={{
             px: '1.25rem',
-            my: '1rem',
+            my: '1.5rem',
           }}
         >
           <Typography
@@ -60,7 +60,10 @@ export default function BasicCard(props: ProductData) {
             color={data.color}
             sx={{ my: '0.5rem' }}
           >
-            <s>kn{data.previousPrice}</s> kn{data.currentPrice}
+            <s>
+              <strong>kn{data.previousPrice}</strong>
+            </s>{' '}
+            kn{data.currentPrice}
           </Typography>
           <Typography variant="body2" color={data.color}>
             Limited {data.discount}% discount
@@ -71,6 +74,7 @@ export default function BasicCard(props: ProductData) {
         sx={{
           mt: '2rem',
           mb: '1.5rem',
+          mx: '0.75rem',
           display: 'flex',
           justifyContent: 'space-between',
         }}

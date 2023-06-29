@@ -22,6 +22,7 @@ function App() {
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '100vh',
+        mt: '2rem',
       }}
     >
       <Typography variant="h5" sx={{ textAlign: 'center', fontWeight: 'bold' }}>

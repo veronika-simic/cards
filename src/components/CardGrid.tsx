@@ -38,7 +38,15 @@ export default function CardGrid() {
     <Grid
       container
       spacing={2}
-      sx={{ my: '0.25rem', display: 'flex', justifyContent: 'center' }}
+      sx={{
+        my: '0.25rem',
+        display: 'flex',
+        justifyContent: 'center',
+        '@media (max-width: 1000px)': {
+          flexDirection: 'column',
+          alignItems: 'center',
+        },
+      }}
     >
       {[0, 1, 2].map((value) => (
         <Grid key={value} item>
