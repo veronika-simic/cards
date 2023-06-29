@@ -67,7 +67,12 @@ export default function BasicCard(props: any) {
         </CardContent>
       </CardActionArea>
       <CardActions
-        sx={{ my: '1.5rem', display: 'flex', justifyContent: 'space-between' }}
+        sx={{
+          mt: '2.5rem',
+          mb: '1.5rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+        }}
       >
         <CustomButton text="Shop now" color={data.color} />
         <AgeIndicator age={data.age} color={data.color} />
