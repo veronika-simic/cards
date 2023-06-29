@@ -1,7 +1,7 @@
 # Project Name
 
 > Preview available products
-
+> Live version available here: https://cards-8phf.vercel.app/
 ## Table of Contents
 
 - [General Info](#general-information)
